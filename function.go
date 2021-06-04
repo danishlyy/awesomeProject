@@ -2,23 +2,27 @@ package main
 
 import "fmt"
 
+var packageVariable int64
+
 func sayHello() {
 	fmt.Println("hello,world!")
 }
 
 func repeatLine(line string, times int) {
-	for i:=0;i<times;i++ {
+	for i := 0; i < times; i++ {
 		fmt.Println(line)
 	}
 }
 
-func paintNeeded(width int64,height int64)  {
+func paintNeeded(width int64, height int64) {
 	result := width * height
 	fmt.Println("area is ", result/1.0)
 }
 
 func main() {
+	packageVariable = 10
+	fmt.Println(packageVariable)
 	sayHello()
-	repeatLine("hello",3)
-	paintNeeded(10,20)
+	repeatLine("hello", 3)
+	paintNeeded(10, 20)
 }
